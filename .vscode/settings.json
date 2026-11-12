@@ -1,0 +1,8 @@
+{
+  "livePreview.portNumber": 3000,
+  "livePreview.serverRoot": "",
+  "livePreview.defaultPreviewPath": "/index.html",
+  "livePreview.openPreviewTarget": "External Browser",
+  "livePreview.customExternalBrowser": "Default",
+  "livePreview.autoRefreshPreview": "On Changes to Saved Files"
+}
