@@ -4,25 +4,28 @@ An educational website about Creutzfeldt-Jakob disease (CJD), covering symptoms,
 
 ## Project Status
 
-The project is transitioning from an Expo and React Native app toward a responsive React website. The website migration is planned and has not yet been completed.
+This project is being planned as a traditional website with a separate HTML file for each page. It will use HTML, CSS, and TypeScript, without React. The folders are organized, but page files and the TypeScript build setup have not been created yet.
 
-## Planned Technologies
+## Technologies
 
-- **React** — reusable components and pages
-- **TypeScript** — type checking and application logic
-- **HTML** — semantic page structure through React JSX
-- **CSS** — styling, responsive layouts, and light and dark themes
+- **HTML** — page content, headings, navigation, and links between pages.
+- **CSS** — colors, typography, responsive layouts, and themes.
+- **TypeScript** — interactive features such as menus and a theme switch.
 
-## Pages
+TypeScript will be compiled into JavaScript before it runs in the browser. HTML pages will load the generated JavaScript, not the TypeScript source files. Build and run instructions will be added when that setup exists.
 
-- **Home** — an introduction to CJD and links to each topic
-- **Symptoms** — symptoms organized into readable groups
-- **Risk Factors** — information about who may be at higher risk
-- **Diagnosis** — an overview of assessment and testing
+## Planned Pages
+
+- **index.html** — introduce CJD and link to the other topics.
+- **symptoms.html** — organize symptoms into readable groups.
+- **risk-factors.html** — explain who may be at higher risk.
+- **diagnosis.html** — explain assessment and testing.
+
+Each page will be a complete HTML document. Normal links will connect the pages, and they can share the same CSS and JavaScript.
 
 ## Design
 
-The website follows the project's [Figma design](https://www.figma.com/design/en3498WwmpJ0g5n4ve6G9e).
+The planned website follows the project's [Figma design](https://www.figma.com/design/en3498WwmpJ0g5n4ve6G9e).
 
 Design goals include:
 
@@ -33,4 +36,22 @@ Design goals include:
 - Keyboard-accessible navigation and visible focus indicators
 - Clear links with pointer cursors
 
+## Roadmap
 
+- [ ] Create the HTML pages and shared CSS
+- [ ] Set up TypeScript compilation
+- [ ] Add navigation between pages
+- [ ] Apply the Figma layouts
+- [ ] Add interactive features as needed
+- [ ] Check responsive layouts and accessibility
+- [ ] Review content and source links
+- [ ] Publish the website
+
+## Sources
+
+- [CDC: About CJD](https://www.cdc.gov/creutzfeldt-jakob/about/index.html)
+- [CDC: Clinical Overview of CJD](https://www.cdc.gov/creutzfeldt-jakob/hcp/clinical-overview/index.html)
+
+## Purpose
+
+This website provides educational information. It does not diagnose illness or replace advice from a healthcare professional.
