@@ -36,19 +36,4 @@ Design goals include:
 ## Planned Folder Structure
 
 ```text
-src/
-├── components/
-│   ├── Header.tsx
-│   ├── Navigation.tsx
-│   ├── ReadingCard.tsx
-│   └── Footer.tsx
-├── pages/
-│   ├── Home.tsx
-│   ├── Symptoms.tsx
-│   ├── RiskFactors.tsx
-│   └── Diagnosis.tsx
-├── styles/
-│   ├── global.css
-│   └── layout.css
-├── App.tsx
-└── main.tsx
+
