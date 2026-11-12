@@ -3,21 +3,24 @@
 
 body {
     margin: 0;
+    padding-bottom: 120px; /* Prevents the fixed footer from covering the bottom card */
 }
 
 h1 {
     font-family: "Rye", serif;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 55px; /* Extra space so the fixed nav bar doesn't overlap the title */
     padding-bottom: 5px;
     font-size: 50px;
 }
 
-p {
+.intro-text {
     font-family: "Caveat", cursive;
     line-height: 1.6;
-    font-size: 30px; /* Bumped up slightly since handwritten fonts often look smaller */
-    padding: 15px;
+    font-size: 30px;
+    padding: 15px 40px;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .footer {
@@ -31,36 +34,89 @@ p {
     height: 10%;
     width: 100%;
 }
+
 .footer p {
-    font-size: 15px;
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 nav {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #26382e;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #26382e;
 }
 
 ul li {
-  float: left;
+    float: left;
 }
 
 ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 ul li a:hover {
-  background-color: #111111;
+    background-color: #111111;
+}
+
+/* --- New Card Styles --- */
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.link-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f3f5f3;
+    color: #1e2420;
+    text-decoration: none;
+    padding: 20px 24px;
+    border-radius: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.link-section:hover {
+    background-color: #355C46;
+    color: #ffffff;
+}
+
+.link-text h3 {
+    margin: 0 0 6px 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.link-text p {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.85;
+}
+
+.arrow {
+    font-size: 20px;
+    line-height: 1;
 }
