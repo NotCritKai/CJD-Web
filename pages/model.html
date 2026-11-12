@@ -1,196 +1,55 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Illustrative CJD Body Model</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Illustrative CJD Body Model</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="../styles/styles.css">
+  <body>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#" class="title">CJD</a></li>
+        <li><a href="../index.html">Overview</a></li>
+        <li><a href="symptoms.html">Symptoms</a></li>
+        <li><a href="risk-factors.html">Risk Factors</a></li>
+        <li><a href="diagnosis.html">Diagnosis</a></li>
+        <li><a href="#" class="selected">Model</a></li>
+      </ul>
+    </nav>
 
-  <style>
-    .cjd-model {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      color: #1e2420;
-      font-family: sans-serif;
-    }
+    <main class="cjd-model">
+      <h1>CJD: illustrative body model</h1>
 
-    .cjd-model h1 {
-      margin: 20px 0 8px;
-      padding: 0 0 5px;
-      color: #26382e;
-      font-family: "Rye", Georgia, serif;
-      font-size: clamp(30px, 5vw, 44px);
-      text-align: center;
-    }
+      <p class="intro">
+        Choose a type to highlight the tissues involved in this simplified
+        diagram.
+      </p>
 
-    .cjd-model .intro,
-    .cjd-model .note {
-      color: #355C46;
-      font-family: "Caveat", cursive;
-    }
+      <div class="controls" aria-label="Choose CJD type">
+        <button id="classicButton" aria-pressed="true">Classic CJD</button>
+        <button id="variantButton" aria-pressed="false">Variant CJD</button>
+      </div>
 
-    .cjd-model .intro {
-      max-width: 700px;
-      margin: 0 auto 16px;
-      font-size: 24px;
-      line-height: 1.4;
-      text-align: center;
-    }
+      <section class="model" aria-label="Illustration and description">
+        <svg
+          class="figure"
+          viewBox="0 0 360 560"
+          role="img"
+          aria-labelledby="svgTitle svgDescription"
+        >
+          <title id="svgTitle">Simplified human body diagram</title>
+          <desc id="svgDescription">
+            Brain and spinal cord are highlighted for classic CJD. Variant CJD
+            also highlights lymphoid tissue.
+          </desc>
 
-    .cjd-model .controls {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 16px 0;
-    }
-
-    .cjd-model button {
-      padding: 10px 16px;
-      border: 1px solid #355C46;
-      border-radius: 8px;
-      background: #26382e;
-      color: #fff;
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .cjd-model button:hover,
-    .cjd-model button[aria-pressed="true"] {
-      background: #355C46;
-    }
-
-    .cjd-model .model {
-      display: grid;
-      grid-template-columns: minmax(250px, 1fr) minmax(220px, 0.8fr);
-      gap: 20px;
-      align-items: center;
-      padding: 20px;
-      border: 1px solid #cbd6cd;
-      border-radius: 16px;
-      background: #f3f5f3;
-    }
-
-    .cjd-model .figure {
-      display: block;
-      width: 100%;
-      max-height: 520px;
-    }
-
-    .cjd-model .key {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      margin: 12px 0;
-      color: #26382e;
-    }
-
-    .cjd-model .dot {
-      width: 14px;
-      height: 14px;
-      flex: 0 0 14px;
-      border-radius: 50%;
-      background: #527b59;
-    }
-
-    .cjd-model .dot.lymph {
-      background: #a5b38c;
-    }
-
-    .cjd-model .status {
-      min-height: 3em;
-      padding: 12px;
-      border-radius: 8px;
-      background: #e4ebe5;
-      color: #26382e;
-    }
-
-    .cjd-model .note {
-      margin: 14px 0 0;
-      font-size: 19px;
-      line-height: 1.4;
-    }
-
-    .cjd-model .glow {
-      filter: drop-shadow(0 0 7px #6d926f);
-      animation: cjdPulse 1.8s ease-in-out infinite alternate;
-    }
-
-    .cjd-model .variant-glow {
-      filter: drop-shadow(0 0 7px #8b9e72);
-      animation: cjdPulse 1.8s ease-in-out infinite alternate;
-    }
-
-    @keyframes cjdPulse {
-      from { opacity: 0.65; }
-      to { opacity: 1; }
-    }
-
-    @media (max-width: 650px) {
-      .cjd-model .model {
-        grid-template-columns: 1fr;
-      }
-
-      .cjd-model .figure {
-        max-height: 400px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .cjd-model *,
-      .cjd-model *::before,
-      .cjd-model *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="../index.html">Overview</a></li>
-      <li><a href="symptoms.html">Symptoms</a></li>
-      <li><a href="risk-factors.html">Risk Factors</a></li>
-      <li><a href="diagnosis.html">Diagnosis</a></li>
-      <li><a href="model.html" aria-current="page">Model</a></li>
-    </ul>
-  </nav>
-
-  <main class="cjd-model">
-    <h1>CJD: illustrative body model</h1>
-
-    <p class="intro">
-      Choose a type to highlight the tissues involved in this simplified
-      diagram.
-    </p>
-
-    <div class="controls" aria-label="Choose CJD type">
-      <button id="classicButton" aria-pressed="true">Classic CJD</button>
-      <button id="variantButton" aria-pressed="false">Variant CJD</button>
-    </div>
-
-    <section class="model" aria-label="Illustration and description">
-      <svg
-        class="figure"
-        viewBox="0 0 360 560"
-        role="img"
-        aria-labelledby="svgTitle svgDescription"
-      >
-        <title id="svgTitle">Simplified human body diagram</title>
-        <desc id="svgDescription">
-          Brain and spinal cord are highlighted for classic CJD.
-          Variant CJD also highlights lymphoid tissue.
-        </desc>
-
-        <!-- Body silhouette -->
-        <g fill="#dce6dd" stroke="#355C46" stroke-width="3">
-          <circle cx="180" cy="72" r="42" />
-          <path
-            d="M151 118
+          <!-- Body silhouette -->
+          <g fill="#dce6dd" stroke="#355C46" stroke-width="3">
+            <circle cx="180" cy="72" r="42" />
+            <path
+              d="M151 118
                C126 125 108 140 101 169
                L79 267 Q75 285 91 290 Q106 295 111 278
                L132 197 L138 286
@@ -200,129 +59,129 @@
                L222 286 L228 197 L249 278
                Q254 295 269 290 Q285 285 281 267
                L259 169 C252 140 234 125 209 118 Z"
-          />
-        </g>
+            />
+          </g>
 
-        <!-- Brain -->
-        <g class="glow">
-          <path
-            d="M151 65
+          <!-- Brain -->
+          <g class="glow">
+            <path
+              d="M151 65
                C145 51 157 39 169 44
                C176 33 193 38 195 48
                C210 48 216 63 208 73
                C210 86 195 94 185 87
                C175 96 159 89 160 79
                C150 78 146 72 151 65Z"
-            fill="#78977a"
-            stroke="#355C46"
-            stroke-width="2"
-          />
-          <path
-            d="M179 44 Q177 65 181 88"
+              fill="#78977a"
+              stroke="#355C46"
+              stroke-width="2"
+            />
+            <path
+              d="M179 44 Q177 65 181 88"
+              fill="none"
+              stroke="#355C46"
+              stroke-width="2"
+            />
+          </g>
+
+          <!-- Spinal cord and nerves -->
+          <g
+            class="glow"
             fill="none"
-            stroke="#355C46"
+            stroke="#527b59"
+            stroke-width="8"
+            stroke-linecap="round"
+          >
+            <path d="M180 91 L180 286" />
+            <path d="M180 150 L145 179" />
+            <path d="M180 150 L215 179" />
+            <path d="M180 205 L145 227" />
+            <path d="M180 205 L215 227" />
+            <path d="M180 286 L158 360" />
+            <path d="M180 286 L202 360" />
+          </g>
+
+          <!-- Lymphoid tissue, shown only for variant CJD -->
+          <g
+            id="lymphoid"
+            class="variant-glow"
+            style="display: none"
+            fill="#a5b38c"
+            stroke="#526b4f"
             stroke-width="2"
-          />
-        </g>
+          >
+            <circle cx="143" cy="157" r="8" />
+            <circle cx="217" cy="157" r="8" />
+            <circle cx="147" cy="218" r="8" />
+            <circle cx="213" cy="218" r="8" />
+            <circle cx="162" cy="289" r="8" />
+            <circle cx="198" cy="289" r="8" />
+          </g>
 
-        <!-- Spinal cord and nerves -->
-        <g
-          class="glow"
-          fill="none"
-          stroke="#527b59"
-          stroke-width="8"
-          stroke-linecap="round"
-        >
-          <path d="M180 91 L180 286" />
-          <path d="M180 150 L145 179" />
-          <path d="M180 150 L215 179" />
-          <path d="M180 205 L145 227" />
-          <path d="M180 205 L215 227" />
-          <path d="M180 286 L158 360" />
-          <path d="M180 286 L202 360" />
-        </g>
+          <!-- Labels -->
+          <g fill="#26382e" font-family="sans-serif" font-size="13">
+            <text x="245" y="72">Brain</text>
+            <text x="205" y="248">Spinal cord</text>
+            <text x="225" y="310">Lymphoid tissue</text>
+          </g>
+          <g stroke="#355C46" stroke-width="1">
+            <path d="M211 70 L239 70" />
+            <path d="M185 245 L201 245" />
+            <path d="M205 306 L220 306" />
+          </g>
+        </svg>
 
-        <!-- Lymphoid tissue, shown only for variant CJD -->
-        <g
-          id="lymphoid"
-          class="variant-glow"
-          style="display: none"
-          fill="#a5b38c"
-          stroke="#526b4f"
-          stroke-width="2"
-        >
-          <circle cx="143" cy="157" r="8" />
-          <circle cx="217" cy="157" r="8" />
-          <circle cx="147" cy="218" r="8" />
-          <circle cx="213" cy="218" r="8" />
-          <circle cx="162" cy="289" r="8" />
-          <circle cx="198" cy="289" r="8" />
-        </g>
+        <div>
+          <div class="key">
+            <span class="dot"></span>
+            Brain and nervous system
+          </div>
+          <div class="key">
+            <span class="dot lymph"></span>
+            Lymphoid tissue
+          </div>
 
-        <!-- Labels -->
-        <g fill="#26382e" font-family="sans-serif" font-size="13">
-          <text x="245" y="72">Brain</text>
-          <text x="205" y="248">Spinal cord</text>
-          <text x="225" y="310">Lymphoid tissue</text>
-        </g>
-        <g stroke="#355C46" stroke-width="1">
-          <path d="M211 70 L239 70" />
-          <path d="M185 245 L201 245" />
-          <path d="M205 306 L220 306" />
-        </g>
-      </svg>
+          <p id="status" class="status" aria-live="polite">
+            Classic CJD: the diagram highlights the brain and nervous system.
+          </p>
 
-      <div>
-        <div class="key">
-          <span class="dot"></span>
-          Brain and nervous system
+          <p class="note">
+            The highlights are conceptual. They do not show a literal route,
+            speed, or timeline of disease progression.
+          </p>
         </div>
-        <div class="key">
-          <span class="dot lymph"></span>
-          Lymphoid tissue
-        </div>
+      </section>
 
-        <p id="status" class="status" aria-live="polite">
-          Classic CJD: the diagram highlights the brain and nervous system.
-        </p>
+      <p class="note">
+        Educational illustration only. It is not a diagnostic tool or a precise
+        anatomical model.
+      </p>
+    </main>
 
-        <p class="note">
-          The highlights are conceptual. They do not show a literal route,
-          speed, or timeline of disease progression.
-        </p>
-      </div>
-    </section>
+    <footer class="footer">
+      <p>Educational information only</p>
+    </footer>
 
-    <p class="note">
-      Educational illustration only. It is not a diagnostic tool or a precise
-      anatomical model.
-    </p>
-  </main>
+    <script>
+      const classicButton = document.querySelector("#classicButton");
+      const variantButton = document.querySelector("#variantButton");
+      const lymphoid = document.querySelector("#lymphoid");
+      const status = document.querySelector("#status");
 
-  <footer class="footer">
-    <p>Educational information only</p>
-  </footer>
+      function showType(type) {
+        const isVariant = type === "variant";
 
-  <script>
-    const classicButton = document.querySelector("#classicButton");
-    const variantButton = document.querySelector("#variantButton");
-    const lymphoid = document.querySelector("#lymphoid");
-    const status = document.querySelector("#status");
+        lymphoid.style.display = isVariant ? "inline" : "none";
+        classicButton.setAttribute("aria-pressed", String(!isVariant));
+        variantButton.setAttribute("aria-pressed", String(isVariant));
 
-    function showType(type) {
-      const isVariant = type === "variant";
+        status.textContent = isVariant
+          ? "Variant CJD: the diagram highlights the brain and nervous system, as well as lymphoid tissue."
+          : "Classic CJD: the diagram highlights the brain and nervous system.";
+      }
 
-      lymphoid.style.display = isVariant ? "inline" : "none";
-      classicButton.setAttribute("aria-pressed", String(!isVariant));
-      variantButton.setAttribute("aria-pressed", String(isVariant));
-
-      status.textContent = isVariant
-        ? "Variant CJD: the diagram highlights the brain and nervous system, as well as lymphoid tissue."
-        : "Classic CJD: the diagram highlights the brain and nervous system.";
-    }
-
-    classicButton.addEventListener("click", () => showType("classic"));
-    variantButton.addEventListener("click", () => showType("variant"));
-  </script>
-</body>
+      classicButton.addEventListener("click", () => showType("classic"));
+      variantButton.addEventListener("click", () => showType("variant"));
+    </script>
+  </body>
 </html>

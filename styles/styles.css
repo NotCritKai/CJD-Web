@@ -3,13 +3,13 @@
 
 body {
     margin: 0;
-    padding-bottom: 120px; /* Prevents the fixed footer from covering the bottom card */
+    padding-bottom: 120px;
 }
 
 h1 {
     font-family: "Rye", serif;
     text-align: center;
-    padding-top: 55px; /* Extra space so the fixed nav bar doesn't overlap the title */
+    padding-top: 55px;
     padding-bottom: 5px;
     font-size: 50px;
 }
@@ -70,9 +70,21 @@ ul li a {
 
 ul li a:hover {
     background-color: #111111;
+    border-radius: 15%;
 }
 
-/* --- New Card Styles --- */
+/* --- Active/Selected Nav Link Fix --- */
+ul li a.selected {
+    color: gray;
+    background-color: transparent; /* Keeps it matching the dark bar */
+    pointer-events: none;         /* Disables clicking on the current page */
+}
+
+.title {
+    pointer-events: none;
+}
+
+/* --- Card Styles --- */
 
 .links-container {
     display: flex;
@@ -119,4 +131,135 @@ ul li a:hover {
 .arrow {
     font-size: 20px;
     line-height: 1;
+}
+
+/* --- CJD Model Styles --- */
+.cjd-model {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  color: #1e2420;
+  font-family: sans-serif;
+}
+
+.cjd-model h1 {
+  margin: 20px 0 8px;
+  padding: 0 0 5px;
+  color: #26382e;
+  font-family: "Rye", Georgia, serif;
+  font-size: clamp(30px, 5vw, 44px);
+  text-align: center;
+}
+
+.cjd-model .intro,
+.cjd-model .note {
+  color: #355C46;
+  font-family: "Caveat", cursive;
+}
+
+.cjd-model .intro {
+  max-width: 700px;
+  margin: 0 auto 16px;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.cjd-model .controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.cjd-model button {
+  padding: 10px 16px;
+  border: 1px solid #355C46;
+  border-radius: 8px;
+  background: #26382e;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.cjd-model button:hover,
+.cjd-model button[aria-pressed="true"] {
+  background: #355C46;
+}
+
+.cjd-model .model {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) minmax(220px, 0.8fr);
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #cbd6cd;
+  border-radius: 16px;
+  background: #f3f5f3;
+}
+
+.cjd-model .figure {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+}
+
+.cjd-model .key {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 12px 0;
+  color: #26382e;
+}
+
+.cjd-model .dot {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  border-radius: 50%;
+  background: #527b59;
+}
+
+.cjd-model .dot.lymph {
+  background: #a5b38c;
+}
+
+.cjd-model .status {
+  min-height: 3em;
+  padding: 12px;
+  border-radius: 8px;
+  background: #e4ebe5;
+  color: #26382e;
+}
+
+.cjd-model .note {
+  margin: 14px 0 0;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.cjd-model .glow {
+  filter: drop-shadow(0 0 7px #6d926f);
+  animation: cjdPulse 1.8s ease-in-out infinite alternate;
+}
+
+.cjd-model .variant-glow {
+  filter: drop-shadow(0 0 7px #8b9e72);
+  animation: cjdPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes cjdPulse {
+  from { opacity: 0.65; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 650px) {
+  .cjd-model .model {
+    grid-template-columns: 1fr;
+  }
+
+  .cjd-model .figure {
+    max-height: 400px;
+  }
 }
