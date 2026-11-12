@@ -33,7 +33,4 @@ Design goals include:
 - Keyboard-accessible navigation and visible focus indicators
 - Clear links with pointer cursors
 
-## Planned Folder Structure
-
-```text
 
