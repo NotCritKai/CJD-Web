@@ -31,13 +31,13 @@ h1 {
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 10%;
+    height: 5%;
     width: 100%;
 }
 
 .footer p {
     font-family: "Caveat", cursive;
-    font-size: 18px;
+    font-size: 22px;
     margin: 10px 0;
 }
 
@@ -73,11 +73,11 @@ ul li a:hover {
     border-radius: 15%;
 }
 
-/* --- Active/Selected Nav Link Fix --- */
+/* --- Active/Selected Nav Link --- */
 ul li a.selected {
     color: gray;
-    background-color: transparent; /* Keeps it matching the dark bar */
-    pointer-events: none;         /* Disables clicking on the current page */
+    background-color: transparent;
+    pointer-events: none;
 }
 
 .title {
@@ -133,133 +133,51 @@ ul li a.selected {
     line-height: 1;
 }
 
-/* --- CJD Model Styles --- */
-.cjd-model {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
-  color: #1e2420;
-  font-family: sans-serif;
-}
-
-.cjd-model h1 {
-  margin: 20px 0 8px;
-  padding: 0 0 5px;
-  color: #26382e;
-  font-family: "Rye", Georgia, serif;
-  font-size: clamp(30px, 5vw, 44px);
-  text-align: center;
-}
-
-.cjd-model .intro,
-.cjd-model .note {
-  color: #355C46;
-  font-family: "Caveat", cursive;
-}
-
-.cjd-model .intro {
-  max-width: 700px;
-  margin: 0 auto 16px;
-  font-size: 24px;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.cjd-model .controls {
+.symptoms-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 16px 0;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-.cjd-model button {
-  padding: 10px 16px;
-  border: 1px solid #355C46;
-  border-radius: 8px;
-  background: #26382e;
-  color: #fff;
-  font: inherit;
-  cursor: pointer;
+.symptoms-section {
+    background-color: #f3f5f3;
+    color: #1e2420;
+    text-decoration: none;
+    padding: 20px 24px;
+    border-radius: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.cjd-model button:hover,
-.cjd-model button[aria-pressed="true"] {
-  background: #355C46;
+.symptoms-section:hover {
+    background-color: #355C46;
+    color: #ffffff;
 }
 
-.cjd-model .model {
-  display: grid;
-  grid-template-columns: minmax(250px, 1fr) minmax(220px, 0.8fr);
-  gap: 20px;
-  align-items: center;
-  padding: 20px;
-  border: 1px solid #cbd6cd;
-  border-radius: 16px;
-  background: #f3f5f3;
+.symptoms-text h3 {
+    margin: 0 0 6px 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.cjd-model .figure {
-  display: block;
-  width: 100%;
-  max-height: 520px;
+.symptoms-text p {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.85;
 }
 
-.cjd-model .key {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin: 12px 0;
-  color: #26382e;
+.footer a {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-.cjd-model .dot {
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
-  border-radius: 50%;
-  background: #527b59;
-}
-
-.cjd-model .dot.lymph {
-  background: #a5b38c;
-}
-
-.cjd-model .status {
-  min-height: 3em;
-  padding: 12px;
-  border-radius: 8px;
-  background: #e4ebe5;
-  color: #26382e;
-}
-
-.cjd-model .note {
-  margin: 14px 0 0;
-  font-size: 19px;
-  line-height: 1.4;
-}
-
-.cjd-model .glow {
-  filter: drop-shadow(0 0 7px #6d926f);
-  animation: cjdPulse 1.8s ease-in-out infinite alternate;
-}
-
-.cjd-model .variant-glow {
-  filter: drop-shadow(0 0 7px #8b9e72);
-  animation: cjdPulse 1.8s ease-in-out infinite alternate;
-}
-
-@keyframes cjdPulse {
-  from { opacity: 0.65; }
-  to { opacity: 1; }
-}
-
-@media (max-width: 650px) {
-  .cjd-model .model {
-    grid-template-columns: 1fr;
-  }
-
-  .cjd-model .figure {
-    max-height: 400px;
-  }
+.footer a:visited {
+    color: #ffffff;
+    text-decoration: underline;
 }
