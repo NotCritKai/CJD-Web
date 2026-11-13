@@ -43,13 +43,20 @@ nav ul {
     margin: 0;
     padding: 0;
     background-color: #26382e;
+    align-items: stretch;
+}
+
+nav li {
+    display: flex;
 }
 
 nav a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0 16px;
     border: 4px solid transparent;
     text-decoration: none;
     border-radius: 6px 6px 0 0;
@@ -69,12 +76,14 @@ nav a.selected {
 
 nav a.title {
     border-color: transparent;
-    font-weight: bold;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
+    padding: 0 8px;
+}
+
+nav a.title img {
+    height: 50px;
+    width: auto;
+    display: block;
+    margin: 0;
 }
 
 a:focus-visible {
