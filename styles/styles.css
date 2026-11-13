@@ -127,15 +127,14 @@ a:focus-visible {
     align-items: flex-start;
     gap: 16px;
     text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .link-section:hover,
 .link-section:focus-visible {
-    background: linear-gradient(90deg, #355C46 0%, rgba(255,255,255,0.3) 50%, #355C46 100%);
-    background-size: 200% 100%;
+    background-color: #355C46;
     color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-    animation: shimmerSlide 0.7s ease-in-out;
 }
 
 .link-text h2,
