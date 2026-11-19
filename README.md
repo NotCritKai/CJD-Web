@@ -26,7 +26,7 @@ This starter is organized around the JSX and function-component concepts in [Cod
 - Use `.jsx` for components that return markup and `.js` for ordinary JavaScript helpers.
 - Keep styling in `src/styles/global.css`; apply classes with `className`.
 - Put an image in `public/images/brain.png` and use `<img src="/images/brain.png" alt="Description of the image" />`.
-- Create new page components in `src/pages/`. A new file does not automatically create a URL; routing still needs to be added before linking between pages.
+- Create new page components in `src/pages/`. A new file does not automatically create a URL; routes are registered in `src/App.jsx`. Add a Route there for each new page and use Link or NavLink for internal navigation.
 - Practice props by passing information from App to a child component. Add state and event handlers as you reach those lessons; no extra library is required for these concepts.
 
 TypeScript was removed from this starter to reduce differences from the JavaScript course. It can be added later. Vite still provides the local server and production build.
@@ -135,3 +135,9 @@ These features are planned, not implemented.
 ## Educational purpose
 
 CJD Guide is an educational project, not a diagnostic tool or a replacement for professional medical advice. Medical content and any future AI-generated responses need source review before publication.
+
+## Page navigation
+
+React Router connects the navigation and homepage cards to page components. Overview contains the current content; the other pages are clearly labeled placeholders awaiting migration. NavLink highlights the current page automatically. The header uses the original favicon artwork as its home link.
+
+When deploying, configure the host to serve `index.html` for React page URLs such as `/symptoms`, so directly opening or refreshing a page works. Vite handles this locally.
