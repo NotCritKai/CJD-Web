@@ -157,3 +157,12 @@ nav a.active {
     font-size: 20px;
     line-height: 1;
 }
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+}

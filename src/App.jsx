@@ -6,7 +6,6 @@ import Treatments from './pages/Treatments'
 import CauseAndEffect from './pages/CauseAndEffect'
 import Sources from './pages/Sources'
 import Header from './components/Header'
-import Footer from './components/Footer'
 import Overview from './pages/Overview'
 
 export default function App() {
@@ -23,7 +22,6 @@ export default function App() {
         <Route path="/sources" element={<Sources />} />
         <Route path="*" element={<main><h1>Page not found</h1><p>Choose a page from the navigation above.</p></main>} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   )
 }
